@@ -149,6 +149,10 @@ public class LdapServerExternalResource extends ExternalResource {
         }
     }
 
+    public void shutdown() {
+        after();
+    }
+
     public void add(String dn, Attribute... attributes) throws LDIFException, LDAPException {
         server.add(dn, attributes);
     }
